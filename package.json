@@ -1,0 +1,26 @@
+{
+  "name": "gotranx-ode",
+  "displayName": "Gotranx ODE",
+  "description": "Language support for gotranx ODE files",
+  "version": "0.0.1",
+  "publisher": "finsberg", 
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ode",
+      "aliases": ["ODE", "ode"],
+      "extensions": [".ode"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ode",
+      "scopeName": "source.ode",
+      "path": "./syntaxes/ode.tmLanguage.json"
+    }]
+  }
+}

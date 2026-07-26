@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "ODE",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "match": "#.*$",
+          "name": "comment.line.number-sign.ode"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(parameters|states|expressions|component)\\b",
+          "name": "keyword.control.ode"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "match": "\\b(exp|log|ln|sin|cos|tan|asin|acos|atan|sinh|cosh|tanh|sqrt|Abs|Conditional|And|Or|Gt|Lt|Ge|Le|Eq|Ne|Min|Max)\\b",
+          "name": "support.function.math.ode"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "(=|\\+|-|\\*|/|\\*\\*|\\^|<|>|<=|>=|!=|==)",
+          "name": "keyword.operator.ode"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b[0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+)?\\b",
+          "name": "constant.numeric.ode"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.ode"
+        },
+        {
+          "begin": "'",
+          "end": "'",
+          "name": "string.quoted.single.ode"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.ode"
+}
